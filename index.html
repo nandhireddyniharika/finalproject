@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Interactive Photo Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      text-align: center;
+    }
+    #gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    figure {
+      width: 140px;
+      margin: 0;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 8px;
+    }
+    figure:focus {
+      outline: none;
+      border: 2px solid #0066cc;
+    }
+    figure img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    #large-display {
+      margin: 2rem auto;
+      width: 500px;
+      height: 300px;
+      border: 3px solid #444;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-color: #ddd;
+    }
+    #display-text {
+      font-size: 1.2rem;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body onload="initGallery()">
+  <h1>My Accessible Photo Gallery</h1>
+  <div id="large-display">
+    <span id="display-text">Hover or focus an image below</span>
+  </div>
+
+  <div id="gallery">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+           alt="Golden sunset over tranquil lake">
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80"
+           alt="Snow-capped mountain range under blue sky">
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=400&q=80"
+           alt="Modern city skyline at night with lights reflecting">
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80"
+           alt="Bright yellow sunflower close-up">
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=400&q=80"
+           alt="Forest trail covered in autumn leaves">
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80"
+           alt="Ocean waves crashing on rocky shore">
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
